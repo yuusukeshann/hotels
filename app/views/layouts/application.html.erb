@@ -19,21 +19,21 @@
           <%= link_to "HOTELS", root_path, class: :logo %>
           
           </div>
-          <%# ログインしているときは以下を表示するようにしましょう %>
+          <%# ログイン時 %>
           <% if user_signed_in? %>
             <div class="nav__right">
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-              <%= link_to "New Proto", new_prototype_path, class: :nav__btn %>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: :nav__logout %>
+              <%= link_to "Booking confirmation", root_path, class: :nav__btn %>
             </div>
-          <%# // ログインしているときは上記を表示するようにしましょう %>
-          <%# ログインしていないときは以下を表示するようにしましょう %>
+          <%# ログイン時 %>
+          <%# ログアウト・未登録時 %>
           <% else %>
             <div class="nav__right">
-              <%= link_to "log in", new_user_session_path, class: :nav__btn %>
-              <%= link_to "sign up", new_user_registration_path, class: :nav__btn %>
+              <%= link_to "Log in", new_user_session_path, class: :nav__btn %>
+              <%= link_to "Sign up", new_user_registration_path, class: :nav__btn %>
             </div>
          <% end %>
-          <%# // ログインしていないときは上記を表示するようにしましょう %>
+           <%# ログアウト・未登録時 %>
         </div>
       </div>
     </header>
