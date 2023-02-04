@@ -22,14 +22,14 @@
           <%# ログイン時 %>
           <% if user_signed_in? %>
             <div class="nav__right">
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: :nav__logout %>
+              <%= link_to "Logout", destroy_user_session_path, method: :delete, class: :nav__logout %>
               <%= link_to "Booking confirmation", root_path, class: :nav__btn %>
             </div>
           <%# ログイン時 %>
           <%# ログアウト・未登録時 %>
           <% else %>
             <div class="nav__right">
-              <%= link_to "Log in", new_user_session_path, class: :nav__btn %>
+              <%= link_to "Login", new_user_session_path, class: :nav__btn %>
               <%= link_to "Sign up", new_user_registration_path, class: :nav__btn %>
             </div>
          <% end %>
