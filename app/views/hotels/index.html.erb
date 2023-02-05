@@ -1,21 +1,17 @@
 
 
 
-<%= form_with model: @prototype, local: true do |f|%>
+<%= form_with url: plans_path , local: true do |f|%>
   <div class="field">
     <%= f.label :title, "地域" %><br />
-    <%= f.text_field :title, id:"prototype_title" %>
+    <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"prototype_title"}) %>
+    <%# <%= f.text_field :title, id:"prototype_title" %> 
   </div>
 
-  <div class="field">
-    <%= f.label :catch_copy, "日付" %><br />
-    <%= f.text_area :catch_copy, class: :form__text, id:"prototype_catch_copy" %>
-  </div>
-
-  <div class="field">
+  <%# <div class="field">
     <%= f.label :concept, "絞り込み" %><br />
-    <%= f.text_area :concept, class: :form__text, id:"prototype_concept" %>
-  </div>
+    <%# <%= f.text_area :concept, class: :form__text, id:"prototype_concept" %>
+  <%# </div> %>
 
   <div class="field">
     <%= f.label :image, "ホテル名" %><br />
@@ -24,8 +20,20 @@
 
 <div class="field">
     <%= f.label :image, "人数" %><br />
-    <%= f.text_area :image, id:"prototype_image" %>
+    <%= f.collection_select(:genre_id, Guest.all, :id, :name, {}, {class:"guest-select"}) %>
+    <%# <%= f.text_area :image, id:"prototype_image" %> 
   </div>
+
+  <div class="field"> 
+    <%= f.label :catch_copy, "日付" %><br />
+    <%= month_calendar do |date| %>
+  <%= date.day %>
+<% end %>
+    <%# <%= f.text_area :catch_copy, class: :form__text, id:"prototype_catch_copy" %>
+
+  </div>
+
+
 
   <div class="actions">
     <%= f.submit "検索する", class: :form__btn  %>
