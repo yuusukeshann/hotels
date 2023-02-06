@@ -5,5 +5,5 @@ class Plan < ApplicationRecord
   
   belongs_to :hotel
   belongs_to :room
-  has_one :reservation
+  has_many :reservation
 end
