@@ -33,7 +33,7 @@ simple_calendar
 
 ## 画面遷移図	
 
-[![Image from Gyazo](https://i.gyazo.com/585841705da813ee6fd2e281db713e29.png)](https://gyazo.com/585841705da813ee6fd2e281db713e29)
+[![Image from Gyazo](https://i.gyazo.com/b1ca2f88820b10073c70b9bc4f33c9bc.png)](https://gyazo.com/b1ca2f88820b10073c70b9bc4f33c9bc)
 
 <br><br>
 
