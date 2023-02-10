@@ -1,0 +1,41 @@
+<ul class="content-wrapper">
+  <li class="content">
+
+    <div class="content-top">
+        <div class="hotel-image">
+          <img src="img/sample-1.jpg" class="image">
+        </div>
+        <div class="hotel-detail">
+          <div class="hotel-name">
+            <span> hotel名 </span>
+          </div>
+          <div class="hotel-address">
+            <span> 地域 </span>
+          </div>
+        </div>  
+    </div>  
+
+    <div class="content-bottom">
+      <div class="plan">
+      プラン内容
+      </div>
+      <div class="content-bottom-center">
+        <div class="price">
+          <span> 金額 </span>
+        </div>
+        <div class="date">
+          <span> 日付 </span>
+        </div>
+      </div> 
+      
+      <div class="confirmation-btnbox">
+      <%# <%= link_to "予約する", "plan_path" %>
+      <button type=“button” onclick="location.href='plan_path'" class="confirmation-btn">予約する</button>
+      <%# <%= form_with(url: plan_path, local: true, method: :get, class: "search-form") do |form| %>
+       <%# <%= form.submit "検索", class: "search-btn" %>
+       <%# <% end %> 
+      </div>
+    </div>
+
+  </li>
+</ul> 

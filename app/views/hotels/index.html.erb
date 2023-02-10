@@ -1,7 +1,8 @@
 
 
 
-<%= form_with url: plans_path , local: true do |f|%>
+<%# <%= form_with url: plans_path , local: true do |f| %>
+<%= form_with(url: plans_path, local: true, method: :get, class: "search-form") do |f| %>
   <div class="field">
     <%= f.label :title, "地域" %><br />
     <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"prototype_title"}) %>
@@ -34,8 +35,11 @@
   </div>
 
 
-
   <div class="actions">
     <%= f.submit "検索する", class: :form__btn  %>
   </div>
 <% end %>
+
+
+
+

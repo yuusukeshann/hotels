@@ -1,3 +1,91 @@
-// Place all the styles related to the plans controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.content-wrapper {
+  height: 100vh;  
+  // border: 1px solid #ccc;
+  
+}
+
+.content {
+  height: 40vh;
+  width: 75vw;
+  border: 1px solid #ccc;
+  
+}
+
+.content-top {
+  height: 50%;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hotel-image {
+
+  border: 1px solid #ccc;
+}
+
+.hotel-detail {
+  width: 50%;
+  // border: 1px solid #ccc;
+}
+
+
+.hotel-name {
+  height: 70%;
+  font-size: 50px;
+  line-height: 90px;
+  border: 1px solid #ccc;
+}
+
+.hotel-address {
+  height: 30%;
+  line-height: 40px;
+  border: 1px solid #ccc;
+}
+
+.content-bottom {
+  height: 50%;
+  // border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.plan {
+  width: 38%;
+  font-size: 20px;
+  line-height: 30px;
+  // border: 1px solid #ccc;
+  
+}
+
+.content-bottom-center {
+  width: 38%;
+}
+
+.price {
+  height: 50%;
+  font-size: 20px;
+  line-height: 60px;
+  border: 1px solid #ccc;
+  padding-left: 20px;
+}
+
+.date {
+  height: 50%;
+  font-size: 20px;
+  line-height: 60px;
+  border: 1px solid #ccc;
+  padding-left: 20px;
+}
+
+.confirmation-btnbox {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.confirmation-btn {
+  // width: 33%;
+  // border: 1px solid #ccc;
+}
+
