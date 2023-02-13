@@ -9,5 +9,5 @@ class Guest < ActiveHash::Base
   ]
 
   include ActiveHash::Associations
-  has_many :rooms
+  has_many :reservations
   end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_15_113214) do
+ActiveRecord::Schema.define(version: 2023_02_13_033641) do
 
   create_table "hotels", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -29,6 +29,20 @@ ActiveRecord::Schema.define(version: 2023_01_15_113214) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["hotel_id"], name: "index_plans_on_hotel_id"
     t.index ["room_id"], name: "index_plans_on_room_id"
+  end
+
+  create_table "reservations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.date "first_day", null: false
+    t.date "last_day", null: false
+    t.integer "number_of_night", null: false
+    t.integer "guest_id", null: false
+    t.integer "booking_price", null: false
+    t.bigint "plan_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["plan_id"], name: "index_reservations_on_plan_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
   create_table "rooms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -56,5 +70,7 @@ ActiveRecord::Schema.define(version: 2023_01_15_113214) do
 
   add_foreign_key "plans", "hotels"
   add_foreign_key "plans", "rooms"
+  add_foreign_key "reservations", "plans"
+  add_foreign_key "reservations", "users"
   add_foreign_key "rooms", "hotels"
 end
