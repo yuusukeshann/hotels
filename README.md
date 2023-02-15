@@ -53,16 +53,37 @@ simple_calendar
 
 ## 実装予定の機能	
 
-ホテル検索結果ページ  
-ホテル検索機能の実装  
+* ホテル検索結果ページ  
+* ホテル検索機能の実装
+  * ４つのテーブル結合
+  * 結合したテーブルからの検索機能 
+  * 検索結果の表示
+  * 画像の表示
+  * 保存していない値を利用しての表示
 
-予約確定前確認ページ  
-予約完了ページ  
-予約確認ページ  
-予約の削除ページ   
-削除完了ページ  
+<br>
+* 予約確定前確認ページ
+  * トップページで入力した情報の* 検索結果ページを跨いでの表示  
 
-カレンダーで予約の有無
+<br>
+
+* 予約完了ページ 
+  * 検索時に入力した値の取得と保存
+
+<br>
+
+* 予約確認ページ
+  * テーブルの結合
+  * 結合したテーブルからの検索機能 
+  * 検索結果の表示
+
+
+<br>
+
+* 予約の削除ページ   
+* 削除完了ページ  
+
+* カレンダーで予約有無の表示
 
 
 <br><br>
@@ -125,13 +146,14 @@ has_many :plans
 
 | Column             | Type       | Options                        |
 | ------------------ | ------     | ------------------------------ |
-| date               | datetime   | null: false                    |
+| first_day          | date       | null: false                    |
+| last_day           | date       | null: false                    |
 | number_of_night    | integer    | null: false                    |
 | guest_id           | integer    | null: false                    |
-| hotel              | references | null: false, foreign_key: true |
+| booking_price      | integer    | null: false,                   |
 | plan               | references | null: false, foreign_key: true |
 | user               | references | null: false, foreign_key: true |
-| room               | references | null: false, foreign_key: true |
+
 
 
 
